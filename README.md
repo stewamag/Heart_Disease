@@ -1,2 +1,2 @@
-# Super_Bowl_Ads
-An analysis of Super Bowl Ads and their correlation with stock prices for publicly traded companies.
+# Heart_Disease
+Heart attack analysis with an overview of state heart disease mortality rates.
