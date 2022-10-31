@@ -26,3 +26,7 @@ Slack, email, phone
 ## Machine Learning: 
 
 Binary classification model - Will you have a heart attack (yes or no)?
+
+## SQL Database Plan:
+<img width="922" alt="QuickDBD" src="https://user-images.githubusercontent.com/106691255/199051875-cfa7d25b-8596-4991-9a9c-03400476a907.png">
+
