@@ -1,0 +1,29 @@
+/*a and H3 */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(61,146,201);
+}
+a:hover,
+a:focus{
+    text-decoration: underline;
+}
+
+h3{
+    font-weight: 100;
+}
+/*Layout CSS */
+#layout {
+    padding: 0;
+}
+
+.header {
+    text-align: center;
+    top: auto;
+    margin: 3em auto;
+}
