@@ -1,0 +1,105 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue-Bold;\f1\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab560
+\pard\pardeftab560\partightenfactor0
+
+\f0\b\fs40 \cf0 Heart_Disease\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+
+\f1\b0\fs26 \cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 Schema \
+\
+-- Create a table for Fast_Food\
+CREATE TABLE Fast_Food (\
+	Restaurant_Number INT NOT NULL,\
+    Address VARCHAR NOT NULL,\
+	City VARCHAR NOT NULL,\
+	Latitude DECIMAL NOT NULL,\
+	Longitude DECIMAL NOT NULL,\
+	Name_of_Restaurant VARCHAR NOT NULL,\
+	Zip_Code VARCHAR NOT NULL,\
+	US_State VARCHAR NOT NULL,\
+    PRIMARY KEY (Restaurant_Number)\
+);\
+\
+-- Create a table for Heart_Disease\
+CREATE TABLE Heart_Disease (\
+	Index_No INT NOT NULL,\
+	Year_of_Record INT NOT NULL,\
+	US_State VARCHAR NOT NULL, \
+	Rate_of_Heart_Disease DECIMAL NOT NULL,\
+	Deaths INT NOT NULL,\
+	PRIMARY KEY (Index_No)\
+);\
+\
+-- Create a table for Heart_Attack\
+CREATE TABLE Heart_Attack (\
+	Subject INT NOT NULL,\
+	Age INT NOT NULL,\
+	Sex VARCHAR NOT NULL,\
+	Chest_Pain_Type VARCHAR NOT NULL,\
+	Resting_BP INT NOT NULL,\
+	Cholestoral INT NOT NULL,\
+	Fasting_BS INT NOT NULL,\
+	Resting_ECG VARCHAR NOT NULL,\
+	Max_HR INT NOT NULL,\
+	Exercise_Angina VARCHAR NOT NULL,\
+	Old_Peak DECIMAL NOT NULL,\
+	ST_Slope VARCHAR NOT NULL,\
+	Heart_Disease INT NOT NULL,\
+	PRIMARY KEY (Subject)\
+);\
+\
+SELECT * FROM fast_food\
+SELECT * FROM heart_disease\
+SELECT * FROM heart_attack\
+\
+\
+\
+Queries\
+\
+SELECT US_State, Rate_of_Heart_Disease, Deaths\
+INTO Heart_Disease_2020\
+FROM Heart_Disease\
+WHERE Year_of_Record = '2020';\
+\
+SELECT * FROM heart_disease_2020\
+\
+SELECT US_State, Rate_of_Heart_Disease, Deaths\
+INTO Heart_Disease_2019\
+FROM Heart_Disease\
+WHERE Year_of_Record = '2019';\
+\
+SELECT US_State, Rate_of_Heart_Disease, Deaths\
+INTO Heart_Disease_2018\
+FROM Heart_Disease\
+WHERE Year_of_Record = '2018';\
+\
+SELECT US_State, Rate_of_Heart_Disease, Deaths\
+INTO Heart_Disease_2017\
+FROM Heart_Disease\
+WHERE Year_of_Record = '2017';\
+\
+SELECT US_State, Rate_of_Heart_Disease, Deaths\
+INTO Heart_Disease_2016\
+FROM Heart_Disease\
+WHERE Year_of_Record = '2016';\
+\
+SELECT US_State, Rate_of_Heart_Disease, Deaths\
+INTO Heart_Disease_2015\
+FROM Heart_Disease\
+WHERE Year_of_Record = '2015';\
+\
+SELECT US_State, Rate_of_Heart_Disease, Deaths\
+INTO Heart_Disease_2014\
+FROM Heart_Disease\
+WHERE Year_of_Record = '2014';\
+\
+SELECT US_State, Rate_of_Heart_Disease, Deaths\
+INTO Heart_Disease_2005\
+FROM Heart_Disease\
+WHERE Year_of_Record = '2005';}
