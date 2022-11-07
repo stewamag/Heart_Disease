@@ -19,7 +19,7 @@ h3{
 }
 /*Layout CSS */
 #layout {
-    padding: 0;
+    padding: 10;
 }
 
 .header {
@@ -32,6 +32,9 @@ h3{
 */
 .navbar {
     padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
   }
   
   .navbar ul {
