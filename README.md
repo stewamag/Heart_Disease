@@ -28,6 +28,9 @@ The data will be imported into a SQL database and then used to perform a machine
 The overall analysis will be written into a Google Slide presentation viewable [here](https://docs.google.com/presentation/d/1cJC_sjUArMiMfbOxWKrwwbX-4j2tHW_1R3M52RUsq64/edit?usp=sharing), as well as visualized on a webpage.
 
 ## Technology:
+
+<img width="772" alt="Screen Shot 2022-11-07 at 8 06 15 PM" src="https://user-images.githubusercontent.com/106691255/200474283-66d25dc0-7475-49b3-9975-9777a702662d.png">
+
 Pandas Python library was employed through jupyter notebook to clean data and perform machine learning.
 
 pgAdmin 4 was used to build a postgres SQL database.
