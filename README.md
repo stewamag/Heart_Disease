@@ -44,7 +44,7 @@ His database had 3 tables from a dataset of combined heart attack data from 900 
 
 ![pgAdminHeart_Attack](https://user-images.githubusercontent.com/106691255/200472664-c19cab5e-1604-4d15-8816-d0485a524efe.png)
 
-Maggie create a second to put purpose of creating files for each year of heart disease data for use in Tableau visualizations.
+Maggie created a second database with the purpose of creating files for each year of heart disease data for use in Tableau visualizations.
 
 Her database had 9 tables created from a dataset from the CDC containing heart disease rates by state from the years 2005 and 2014-2020. Maggie used SQL to separate this file into individual years for visualization purposes.
 
