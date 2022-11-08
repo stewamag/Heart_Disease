@@ -25,13 +25,13 @@
           <div class=" collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ms-auto ">
               <li class="nav-item">
-                <a class="nav-link mx-2 active" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link mx-2 active" aria-current="page" href="{{url_for('home')}}">Home</a>
             </li>
               <li class="nav-item">
-                <a class="nav-link mx-2" href="checkheart.html">Check your Heart</a>
+                <a class="nav-link mx-2" href="{{url_for('checkheart')}}">Check your Heart</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link mx-2" href="states.html">Maps of FastFoods in the US</a>
+                <a class="nav-link mx-2" href="{{url_for('states')}}">Maps of FastFoods in the US</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -60,7 +60,6 @@
       </nav><!-- .navbar -->
 
     </header><!-- End Header -->
-<img src="../Images/heart_pill.jpg" alt="headerpic" width = "100%" height="500">
 
 <footer>
     <div class="GitHubMaggie text-lg-center">
