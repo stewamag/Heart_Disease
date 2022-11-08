@@ -2,6 +2,28 @@
 
 Heart attack analysis with an overview of state heart disease mortality rates in connection with concentration of fast food restaurants.
 
+## Table of Contents
+
+* [Project Overview](#project-overview)
+* [Process](#process)
+  - [Data Collection](#data-collection)
+  - [Machine Learning](#machine-learning)
+  - [Analysis, Presentation, and Visualization](#analysis-presentation-and-visualization)
+* [Technology](#technology)
+* [Database](#database)
+* [Machine Learning Model](#machine-learning-model)
+* [Preliminary Data Preprocessing](#preliminary-data-processing)
+* [Preliminary Feature Engineering](#preliminary-feature-engineering)
+* [Training and Testing Sets](#training-and-testing-sets)
+* [Model Choice: Limitations and Benefits](#model-choice-limitations-and-benefits)
+* [Model Results](#model-results)
+* [Machine Learning Results](#machine-learning-results)
+* [Visualizations](#visualizations)
+* [Description of the data exploration phase of the project](#description-of-the-data-exploration-phase-of-the-project)
+* [Description of the analysis phase of the project](#description-of-the-analysis-phase-of-the-project)
+* [Resources](#resources)
+* [Team Members](#team-members)
+
 ## Project Overview:
 
 The purpose of this project was to explore an overall analysis of heart disease in America and the potential implications of availability of unhealthy (meaning fast food) options on the disease and death rates. 
@@ -39,7 +61,7 @@ Visualizations were created using Tableau.
 
 HTMLand Flask were used to create an interactive website to deploy the information to the public, which can be viewed [here]().
 
-## Database
+## Database:
 
 Aaron created one database for the purchase of Machine Learning. 
 
@@ -53,30 +75,30 @@ Her database had 9 tables created from a dataset from the CDC containing heart d
 
 <img width="631" alt="Screen Shot 2022-11-07 at 7 54 35 PM" src="https://user-images.githubusercontent.com/106691255/200472701-1f2221e4-f57f-4c12-bfa8-3c1b0c13cdeb.png">
 
-## Machine Learning Model
+## Machine Learning Model:
 
 View the Machine Learning Model [here](https://github.com/stewamag/Heart_Disease/blob/main/Heart_Pandas_Pickle.ipynb).
 
 In this machine learning analysis, we look to explore the relationship of various demographic and health variables with heart disease to see if we can predict whether someone is likely to have a cardiac event or not.
 
-Machine Learning Goal: To use the data to predict whether a user will suffer from a heart attack with 80% accuracy.
+**Machine Learning Goal**: To use the data to predict whether a user will suffer from a heart attack with 80% accuracy.
 
-Implications: By using key variables to predict whether or not a subject is likely to have a heart event, the individual can take steps to change their lifestyle to prevent it before it happens.
+**Implications**: By using key variables to predict whether or not a subject is likely to have a heart event, the individual can take steps to change their lifestyle to prevent it before it happens.
 
-Data Variables Explored:
-Age
-Sex
-Chest Pain Type
-Resting Blood Pressure
-Cholesterol
-Fasting Blood Pressure
-Resting ECG
-Max Heart Rate
-Exercise Induced Angina
-Previous Peak
-Heart Rate Slope
+**Data Variables Explored**:
+  - Age
+  - Sex
+  - Chest Pain Type
+  - Resting Blood Pressure
+  - Cholesterol
+  - Fasting Blood Pressure
+  - Resting ECG
+  - Max Heart Rate
+  - Exercise Induced Angina
+  - Previous Peak
+  - Heart Rate Slope
 
-## Preliminary Data Preprocessing
+## Preliminary Data Preprocessing:
 
 View Code for the Data Preprocessing [here](https://github.com/stewamag/Heart_Disease/blob/main/heart_disease_clean_data.ipynb).
 
@@ -86,7 +108,7 @@ CSV files were then connected to the PostgresSQL database.
 
 SQL tables were created and queries were employed to create separate files for each year of heart disease.
 
-## Preliminary Feature Engineering, Feature Selection, and Decision-Making Process
+## Preliminary Feature Engineering:
 
 View Code for the Feature Engineering [here](https://github.com/stewamag/Heart_Disease/blob/main/Heart_Pandas_Pickle.ipynb).
 
@@ -97,7 +119,7 @@ View Code for the Feature Engineering [here](https://github.com/stewamag/Heart_D
 **Feature Engineering**: 
 <img width="876" alt="Screen Shot 2022-11-07 at 8 04 34 PM" src="https://user-images.githubusercontent.com/106691255/200472877-28a32f4e-2487-4e27-944e-0145765a651d.png">
 
-## Training and Testing Sets
+## Training and Testing Sets:
 
 The machine learning model split the data into two sets: training and testing. The training set was used to create the model and the testing set to check its performance. The purpose of saving some of the data for the testing set is to ensure that the model is working properly when introduced to unknown data. The SciKit library was used to split the data into the testing and training sets, then run the model on both.
 
