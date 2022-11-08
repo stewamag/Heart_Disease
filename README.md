@@ -40,15 +40,19 @@ HTMLand Flask were used to create an interactive website to deploy the informati
 
 Aaron created one database for the purchase of Machine Learning. 
 
-His database had __ tables from a dataset of combined heart attack data from 900 different patients. The database was created in PostgresSQL (pgAdmin 4) and then linked back into jupyter notebook for Machine Learning. 
+His database had 3 tables from a dataset of combined heart attack data from 900 different patients. The database was created in PostgresSQL (pgAdmin 4) and then linked back into jupyter notebook for Machine Learning. 
+
+
 
 Maggie create a second to put purpose of creating files for each year of heart disease data for use in Tableau visualizations.
 
 Her database had 9 tables created from a dataset from the CDC containing heart disease rates by state from the years 2005 and 2014-2020. Maggie used SQL to separate this file into individual years for visualization purposes.
 
+
+
 ## Machine Learning Model
 
-View the Machine Learning Model [here]().
+View the Machine Learning Model [here](https://github.com/stewamag/Heart_Disease/blob/main/Heart_Pandas_Pickle.ipynb).
 
 In this machine learning analysis, we look to explore the relationship of various demographic and health variables with heart disease to see if we can predict whether someone is likely to have a cardiac event or not.
 
@@ -71,7 +75,7 @@ Heart Rate Slope
 
 ## Preliminary Data Preprocessing
 
-View Code for the Data Preprocessing and Database Table Creations [here]().
+View Code for the Data Preprocessing [here](https://github.com/stewamag/Heart_Disease/blob/main/heart_disease_clean_data.ipynb).
 
 Before being able to load the data into PostgresSQL, it needed to be reformatted. Data was cleaned in jupyter notebook using Python Pandas. Columns were renamed for uniformity and unnecessary columns were dropped.
 
@@ -91,25 +95,27 @@ Feature Engineering:
 
 ## Training and Testing Sets
 
-The machine learning model split the data into two sets: training and testing. The training set was used to create the model and the testing set to check its performance. The purpose of saving some of the data for the testing set is to ensure that the model is working properly when introduced to unknown data. The SciKit library was used to split the data into the testing and training sets then run the model on both.
+The machine learning model split the data into two sets: training and testing. The training set was used to create the model and the testing set to check its performance. The purpose of saving some of the data for the testing set is to ensure that the model is working properly when introduced to unknown data. The SciKit library was used to split the data into the testing and training sets, then run the model on both.
+
+
 
 ## Model Choice: Limitations and Benefits
 
 We used a supervised machine learning model because we were dealing with labeled datasets with an expected binary outcome.
 
-Benefits of the Model:
+Benefits of the Model: Linear regression performs exceptionally well for linearly separable data. We got a higher accuracy rate and were only looking for a yes or no result. Logistic regression just made the most sense. It was easier to implement, interpret and more efficient to train
 
-Drawbacks of the Model: 
+Drawbacks of the Model: The only drawback was that when dealing with non-numerical values, it had to be processed differently. Our data does not give early detection. It would not be preventative for daily life choices. 
 
 ## Model Results:
 
-Accuracy: The model received an accuracy score of __, which means that __% of the testing data was accurately predicted by the model. 
+Accuracy: The model received an accuracy score of 0.83, which means that 83% of the testing data was accurately predicted by the model. 
 
-Precision: The [positive predictive value (PPV), or precision, is how likely that a predicted positive is a true positive. This number can be found by dividing the number of true positives by the total number of positives (true and false). Our precision for this model was ___.
+Precision: The positive predictive value (PPV), or precision, is how likely that a predicted positive is a true positive. This number can be found by dividing the number of true positives by the total number of positives (true and false). Our precision for this model was 0.84.
 
-Sensitivity/Recall: The sensitivity, also know as recall, measures how many true positives were actually predicted as such. The sensitivity of our model was ___, which means that the model is ___% likely to accurately guess whether or not someone will have a heart attack.
+Sensitivity/Recall: The sensitivity, also know as recall, measures how many true positives were actually predicted as such. The sensitivity of our model was 0.84, which means that the model is 84% likely to accurately guess whether or not someone will have a heart attack.
 
-F1 Score: Tests that are highly sensitive are great because they are likely to do a good job at detecting true positives. They also have the potential, however, to detect false positives. Precise models are also good because it shows that the bulk of the positive results were indeed true positives. However, it is possible with a precise model that true positives might not always be detected (and be tagged as a false negative instead). The F1 Score is like a balancing act between the two. An imbalanced model would yield a low F1 score. Our model's F1 was ___.
+F1 Score: Tests that are highly sensitive are great because they are likely to do a good job at detecting true positives. They also have the potential, however, to detect false positives. Precise models are also good because it shows that the bulk of the positive results were indeed true positives. However, it is possible with a precise model that true positives might not always be detected (and be tagged as a false negative instead). The F1 Score is like a balancing act between the two. An imbalanced model would yield a low F1 score. Our model's F1 was 0.84.
 
 ## Machine Learning Results:
 
@@ -125,15 +131,19 @@ Machine learning was difficult with the original 'heart attack' dataset because 
 ## Description of the analysis phase of the project:
 
 Maggie realized that you cannot merge/join tables in SQL unless the column being joined has only unique values in it. The two tables that she was attempting to join could only be potentially be joined by the "US_State" column, but since the states occurred multiple times within each dataset, it was impossible to join them.
+
 She was, however, able to use SQL to create separate datasets for each year with heart disease data for that year.
 
 ## Resources:
 
 [Heart Failure Prediction Dataset](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction)
+
 [Heart Disease Mortality by State](https://www.cdc.gov/nchs/pressroom/sosmap/heart_disease_mortality/heart_disease.htm)
-Fast Food Restaurants in the United States](https://www.kaggle.com/datasets/thedevastator/fast-food-restaurants-in-the-united-states)
+
+[Fast Food Restaurants in the United States](https://www.kaggle.com/datasets/thedevastator/fast-food-restaurants-in-the-united-states)
 
 ## Team Members:
 
 [Aaron McCarty](https://github.com/AmccartyA)
+
 [Maggie Stewart](https://github.com/stewamag)
