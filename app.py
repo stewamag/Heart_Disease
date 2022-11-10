@@ -12,6 +12,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:db_password@127.0
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 sql = SQLAlchemy(app)
 
+#Load the model
+model = pk
 #<img src="../Images/heart_pill.jpg" alt="headerpic" width = "100%" height="500">
 #Set up app route
 @app.route("/")
@@ -33,7 +35,7 @@ def checkheart():
     #heart = sql.db.Heart.find_one()
     return render_template("checkheart.html")
 
-@app.route("/results")
+@app.route("/results",methods= ['POST'])
 def results():
     #heart results from sql 
     return render_template('results.html')
