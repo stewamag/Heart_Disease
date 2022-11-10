@@ -31,6 +31,11 @@ h3{
     margin: 3em auto;
 }
 
+img {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
 
 /**
 * Desktop Navigation 
