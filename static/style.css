@@ -30,6 +30,8 @@ h3{
     top: auto;
     margin: 3em auto;
 }
+
+
 /**
 * Desktop Navigation 
 */
@@ -251,4 +253,14 @@ h3{
   text-align: justify;
  }  
 
+
+/*Slick */
+
+.skipbar li{
+  float: right;
+  display: inline;
+  padding: 12px;
+  border: 1px solid red;
+  margin-right: 220px;
+}
  
