@@ -82,7 +82,7 @@
               </select>
           </div>
           <div class="form-group">
-              <label for="sexInput">Chest Pain Type</label>
+              <label for="chestInput">Chest Pain Type</label>
               <select class="form-control" id="sexInput">
                   <option selected>Choose...</option>
                   <option value="TA">TA: Typical Angina</option>
@@ -92,20 +92,54 @@
               </select>
           </div>  
           <div class="form-group">
-              <label for="beatsInput">Resting BP</label>
+              <label for="restingInput">Resting BP</label>
               <input type="beats" class="form-control" id="beatsInput" placeholder="Blood Pressure">
           </div>
           <div class="form-group">
-              <label for="beatsInput">Cholesterol</label>
-              <input type="beats" class="form-control" id="beatsInput" placeholder="serum cholesterol">
+              <label for="cholestrolInput">Cholesterol</label>
+              <input type="cholosterl" class="form-control" id="cholosterl" placeholder="serum cholesterol">
           </div>
           <div class="form-group">
               <label for="FastingBS">Fasting Blood Sugar</label>
-              <select class="form-control" id="sexInput">
+              <select class="form-control" id="FBS">
                   <option selected>Choose...</option>
                   <option value="1" >Greater than 120mg/dl</option>
                   <option value="0">Less than 120 mg/dl</option>
               </select>
+          </div>
+          <div class="form-group">
+            <label for="ECG">Resting Electrocardiogram results</label>
+            <select class="form-control" id="RestingECG">
+                <option selected>Choose...</option>
+                <option value="1" >Normal</option>
+                <option value="1">ST-T wave abnormality</option>
+                <option value="1">Left Ventricular Hypertrophy</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="maxHeart">Maximum Heart Rate</label>
+            <input type="beats" class="form-control" id="HeartRate" placeholder="between 60 and 202">
+          </div>
+          <div class="form-group">
+            <label for="Exercise">Exercise Angina</label>
+            <select class="form-control" id="Exercise">
+                <option selected>Do you have Exercise-induced angina</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="maxHeart">Old Peak</label>
+            <input type="beats" class="form-control" id="HeartRate" placeholder="ST-Value">
+          </div>
+          <div class="form-group">
+            <label for="Exercise">ST-Slope</label>
+            <select class="form-control" id="Exercise">
+                <option selected>ST segment</option>
+                <option value="1">Up</option>
+                <option value="0">Flat</option>
+                <option value="0">Down</option>
+            </select>
           </div>
           <div class ="container">
               <div class="jumbotron text-center">
@@ -114,6 +148,7 @@
                               role="button">Check Your Score</a></p>
               </div>
           </div>
+
       </form> 
   </div>
 
