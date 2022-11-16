@@ -13,7 +13,8 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 sql = SQLAlchemy(app)
 
 #Load the model
-model = pk
+model = pk.load(open('model.pkl','rb'))
+
 #<img src="../Images/heart_pill.jpg" alt="headerpic" width = "100%" height="500">
 #Set up app route
 @app.route("/")
@@ -37,13 +38,24 @@ def checkheart():
 
 @app.route("/results",methods= ['POST'])
 def results():
-    #heart results from sql 
-    return render_template('results.html')
+    # Get the data from the POST request.
+    if request.method == "POST":
+        #data = request.get_json(force=True)
+        print(request.form['form-control'])
+        data = float(request.form['form-control'])
+        print("Data", model.predict([[data]]))
+        # Make prediction using model loaded from disk as per the data.
+        prediction = model.predict([[data]])
+
+        # Take the first value of prediction
+        output = prediction[0]
+
+        return render_template("results.html", output=output, exp=data)
 
 #Define other code for use
-def ValuePredictor(to_predict_list):
-    to_predict = np.array(to_predict_list).reshape(1,4)
-    loaded_model = pk.load()
+#def ValuePredictor(to_predict_list):
+    #to_predict = np.array(to_predict_list).reshape(1,4)
+    #loaded_model = pk.load()
 
 if __name__ == "__main__":
    app.run()

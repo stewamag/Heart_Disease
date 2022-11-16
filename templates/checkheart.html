@@ -68,7 +68,7 @@
   </div>
 
   <div class ="container container-sm" style="border:1px solid #c30d0d;">
-      <form action='/submit' method="POST">
+      <form action='/results' method="POST" class="form">
           <div class="form-group">
               <label for="ageInput">Your Age</label>
               <input type="age" class="form-control" id="ageInput" placeholder="88">
@@ -77,8 +77,8 @@
               <label for="sexInput">Gender at Birth</label>
               <select class="form-control" id="sexInput">
                   <option selected>Choose...</option>
-                  <option>Male</option>
-                  <option>Female</option>
+                  <option value ="M">Male</option>
+                  <option value ="F">Female</option>
               </select>
           </div>
           <div class="form-group">
@@ -144,8 +144,9 @@
           <div class ="container">
               <div class="jumbotron text-center">
                   <h1>Heart Analysis</h1>
-              <p><a class= "btn btn-warning btn-lg" href="healthanalysis.html"
-                              role="button">Check Your Score</a></p>
+                  <input type="submit" class="button" value="Submit">
+              <!--<p><a class= "btn btn-warning btn-lg" href="healthanalysis.html"
+                              role="button">Check Your Score</a></p>-->
               </div>
           </div>
 
