@@ -40,17 +40,35 @@ def checkheart():
 def results():
     # Get the data from the POST request.
     if request.method == "POST":
+        
         #data = request.get_json(force=True)
-        print(request.form['exp'])
-        data = float(request.form['exp'])
-        print("Data", model.predict([[data]]))
+        ageInput = int(request.form['ageInput'])
+        beatsInput = int(request.form["beatsInput"])
+        cholesterol = int(request.form["cholesterolInput"])
+        fastBS = int(request.form["fastBS"])
+        maxHeart = int(request.form["maxHeart"])
+        oldPeak = float(request.form["oldPeak"])
+
+        data = [ageInput, beatsInput, cholesterol, fastBS, maxHeart, oldPeak]
+
+        print(ageInput, beatsInput)
+
+        #data = float(request.form['exp'])
+        #print("Data", model.predict([[data]]))
         # Make prediction using model loaded from disk as per the data.
-        prediction = model.predict([[data]])
+        prediction = model.predict([data])
+
+        print(prediction)
+        result = ""
+        if(prediction[0] == 1):
+            result="You Go Breaking Your Heart(you should not break your heart)!"
+        else:
+            result = "Go eat fast food today you're fine!"
 
         # Take the first value of prediction
-        output = prediction[0]
+        #output = prediction[0]
 
-        return render_template("results.html", output=output, exp=data)
+        return render_template("results.html", result = result) #, output=output, exp=data)
 
 #Define other code for use
 #def ValuePredictor(to_predict_list):
