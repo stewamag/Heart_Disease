@@ -6,16 +6,19 @@ import numpy as np
 import pickle as pk
 import os
 
+#loading Heart Images
+HeartImage = os.path.join('static', 'Images')
 #Load App and Database
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:db_password@127.0.0.1:5432/Heart_Ache'
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+app.config['uploadfolder'] = HeartImage
 sql = SQLAlchemy(app)
 
 #Load the model
 model = pk.load(open('model.pkl','rb'))
 
-#<img src="../Images/heart_pill.jpg" alt="headerpic" width = "100%" height="500">
+
 #Set up app route
 @app.route("/")
 def index():
@@ -61,14 +64,16 @@ def results():
         print(prediction)
         result = ""
         if(prediction[0] == 1):
-            result="You Go Breaking Your Heart(you should not break your heart)!"
+            imageLoad = os.path.join(app.config['uploadfolder'], 'BrokenHeart.png')
+            result="You're breaking your heart(please stop breaking your heart)!"
         else:
-            result = "Go eat fast food today you're fine!"
+            imageLoad = os.path.join(app.config['uploadfolder'], 'HealthyHeart.png')
+            result = "The numbers you entered say your heart is doing great! (But what do I know I'm not a doctor just an HTML page)"
 
         # Take the first value of prediction
         #output = prediction[0]
 
-        return render_template("results.html", result = result) #, output=output, exp=data)
+        return render_template("results.html", result = result, correctHeart = imageLoad) #, output=output, exp=data)
 
 #Define other code for use
 #def ValuePredictor(to_predict_list):

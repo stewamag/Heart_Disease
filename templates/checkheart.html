@@ -66,7 +66,9 @@
   <div class="row">
     <img src="{{url_for('static', filename='Images/signs_and_symptoms.png')}}" alt="headerpic" width = "75%" height="500"> 
   </div>
-
+  <div class = "row">
+    <h1> Machine Learning to Predict how your heart is doing</h1>
+  </div>
   <div class ="container container-sm" style="border:1px solid #c30d0d;">
       <form action='/results' method="POST" class="form">
           <div class="form-group">
@@ -74,12 +76,12 @@
               <input type="text" name="ageInput" class="form-control" id="ageInput" placeholder="88">
           </div>
           <div class="form-group">
-              <label for="beatsInput">Resting BP</label>
-              <input type="text" name="beatsInput" class="form-control" id="beatsInput" placeholder="Between 100 and 200">
+              <label for="beatsInput">Resting Blood Pressure</label>
+              <input type="text" name="beatsInput" class="form-control" id="beatsInput" placeholder="Typically Between 100 and 200">
           </div>
           <div class="form-group">
               <label for="cholesterolInput">Cholesterol</label>
-              <input type="text" name="cholesterolInput"  class="form-control" id="cholesterolInput" placeholder="Serum Cholostrel Score">
+              <input type="text" name="cholesterolInput"  class="form-control" id="cholesterolInput" placeholder="Serum Cholostrel Score between 100 and 400">
           </div>
           <div class="form-group">
             <label for="fastBS">Fasting Blood Sugar</label>
