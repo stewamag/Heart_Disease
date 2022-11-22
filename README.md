@@ -28,7 +28,7 @@ Heart attack analysis with an overview of state heart disease mortality rates in
 
 The purpose of this project was to explore an overall analysis of heart disease in America and the potential implications of availability of unhealthy (meaning fast food) options on the disease and death rates. 
 
-A presentation of our project can be found on the following [Google Slides](https://docs.google.com/presentation/d/1cJC_sjUArMiMfbOxWKrwwbX-4j2tHW_1R3M52RUsq64/edit?usp=sharing)
+A presentation of our project can be found on the following [Google Slides](https://docs.google.com/presentation/d/1cJC_sjUArMiMfbOxWKrwwbX-4j2tHW_1R3M52RUsq64/edit?usp=sharing).
 
 ## Process:
 
@@ -155,7 +155,7 @@ We used a supervised machine learning model because we were dealing with labeled
 
 ## Visualizations:
 
-We incorporated our Tableau visualizations into our [Google Slides](https://docs.google.com/presentation/d/1cJC_sjUArMiMfbOxWKrwwbX-4j2tHW_1R3M52RUsq64/edit?usp=sharing) as well as our [webpage]().
+We incorporated our Tableau visualizations into our [Google Slides](https://docs.google.com/presentation/d/1cJC_sjUArMiMfbOxWKrwwbX-4j2tHW_1R3M52RUsq64/edit?usp=sharing) as well as our flask webpage.
 
 ## Description of the data exploration phase of the project:
 
