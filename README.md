@@ -59,7 +59,7 @@ pgAdmin 4 was used to build a postgres SQL database.
 
 Visualizations were created using Tableau.
 
-HTMLand Flask were used to create an interactive website to deploy the information to the public, which can be viewed [here]().
+HTMLand Flask were used to create an interactive website to deploy the information to the public, the code for which is in the files above.
 
 ## Database:
 
